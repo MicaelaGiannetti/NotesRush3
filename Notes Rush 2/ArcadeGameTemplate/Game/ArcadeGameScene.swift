@@ -6,6 +6,11 @@
 import SpriteKit
 import SwiftUI
 
+struct PhysicsCategory {
+    static let None: UInt32 = 0
+    static let Player: UInt32 = 0b1
+    static let Ground: UInt32 = 0b10
+}
 
 class ArcadeGameScene: SKScene {
     /**
@@ -21,7 +26,7 @@ class ArcadeGameScene: SKScene {
     var lastUpdate: TimeInterval = 0
     let cam = SKCameraNode()
     let ground = Ground()
-    let player = SKSpriteNode (imageNamed: "player1")
+   let player = Player()
     
     
     
@@ -36,14 +41,18 @@ class ArcadeGameScene: SKScene {
         self.anchorPoint = .zero
         
         self.camera = cam
-        self.addRunningPlayer()
-        ground.position = CGPoint (x: -self.size.width * 2, y: 150)
+        let player = Player()
+        player.position = CGPoint (x:-150, y:150)
+        self.addChild(player)
+        player.RunningPlayer()
+        ground.position = CGPoint (x: -self.size.width * 2, y: -150)
         ground.size = CGSize (width: self.size.width * 6, height: 0)
         ground.createChildren()
+        
         self.addChild(ground)
         
         self.setUpGame()
-        self.setUpPhysicsWorld()
+     //   self.setUpPhysicsWorld()
         
         
     }
@@ -54,28 +63,7 @@ class ArcadeGameScene: SKScene {
         self.camera!.position = player.position
     }
     
-    func addRunningPlayer(){
-        self.player.position = CGPoint (x: 250, y: 250)
-        self.addChild(player)
-        self.player.physicsBody = SKPhysicsBody(circleOfRadius: size.width)
-        self.player.physicsBody?.affectedByGravity = true
-        
-        //creating animation for the player running
-        let playerAtlas = SKTextureAtlas(named:"RunningPlayer")
-        let playerFrames : [SKTexture] = [
-            playerAtlas.textureNamed("player1"),
-            playerAtlas.textureNamed("player2"),
-            playerAtlas.textureNamed("player3"),
-            playerAtlas.textureNamed("player4")]
-
-        let runAction = SKAction.animate(with: playerFrames, timePerFrame: 0.14)
-        let playerAction = SKAction.repeatForever(runAction)
-        player.run(playerAction)
-        
-        let moveRight = SKAction.moveBy(x:size.width, y:0, duration: 2)
-        let neverEndingRun = SKAction.repeatForever(moveRight)
-        player.run(neverEndingRun)
-    }
+   
     
     override func update(_ currentTime: TimeInterval) {
         
