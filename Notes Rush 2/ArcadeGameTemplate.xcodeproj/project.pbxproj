@@ -19,6 +19,7 @@
 		271CB26E27D6A58A00615359 /* ArcadeGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271CB26D27D6A58A00615359 /* ArcadeGameScene.swift */; };
 		271CB27027D74CAF00615359 /* GameDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271CB26F27D74CAF00615359 /* GameDurationView.swift */; };
 		271CB27227D74CB900615359 /* GameScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271CB27127D74CB900615359 /* GameScoreView.swift */; };
+		3B489EF72B28773A002CF4B2 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B489EF62B28773A002CF4B2 /* Ground.swift */; };
 		3BF528302B284B840030759F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF5282F2B284B840030759F /* Player.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		271CB26D27D6A58A00615359 /* ArcadeGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeGameScene.swift; sourceTree = "<group>"; };
 		271CB26F27D74CAF00615359 /* GameDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDurationView.swift; sourceTree = "<group>"; };
 		271CB27127D74CB900615359 /* GameScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScoreView.swift; sourceTree = "<group>"; };
+		3B489EF62B28773A002CF4B2 /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		3BF5282F2B284B840030759F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				3BF5282F2B284B840030759F /* Player.swift */,
+				3B489EF62B28773A002CF4B2 /* Ground.swift */,
 				271CB24F27D6569700615359 /* ArcadeGameTemplate */,
 				271CB24E27D6569700615359 /* Products */,
 			);
@@ -202,6 +205,7 @@
 				271CB26127D656BA00615359 /* MainScreenView.swift in Sources */,
 				271CB25F27D656A800615359 /* ArcadeGameLogic.swift in Sources */,
 				271CB25327D6569700615359 /* ContentView.swift in Sources */,
+				3B489EF72B28773A002CF4B2 /* Ground.swift in Sources */,
 				271CB27227D74CB900615359 /* GameScoreView.swift in Sources */,
 				271CB25127D6569700615359 /* ArcadeGameTemplateApp.swift in Sources */,
 				271CB26B27D6659600615359 /* Constants.swift in Sources */,

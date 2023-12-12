@@ -20,24 +20,27 @@ class ArcadeGameScene: SKScene {
     // Used to calculate how much time has passed between updates.
     var lastUpdate: TimeInterval = 0
     let cam = SKCameraNode()
+    let ground = Ground()
     let player = SKSpriteNode (imageNamed: "player1")
     
     
     
     override func didMove(to view: SKView) {
         
-        let ground = SKSpriteNode(color: .darkGray, size: CGSize(width: self.size.width * 6, height: 400))
-        ground.position = CGPoint (x: -100, y: 0)
+        
       //  let pointTopLeft = CGPoint (x:0, y:400)
       //  let pointTopRight = CGPoint (x: size.width, y:400)
-        self.physicsBody = SKPhysicsBody (rectangleOf: ground.size)
-        self.addChild(ground)
+        
         
         
         self.anchorPoint = .zero
         
         self.camera = cam
         self.addRunningPlayer()
+        ground.position = CGPoint (x: -self.size.width * 2, y: 150)
+        ground.size = CGSize (width: self.size.width * 6, height: 0)
+        ground.createChildren()
+        self.addChild(ground)
         
         self.setUpGame()
         self.setUpPhysicsWorld()

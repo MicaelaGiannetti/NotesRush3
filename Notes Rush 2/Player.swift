@@ -8,6 +8,6 @@
 import Foundation
 import SpriteKit
 
-class Player : SKSpriteNode, GameSprite {
+class Player : SKSpriteNode{
     
 }
