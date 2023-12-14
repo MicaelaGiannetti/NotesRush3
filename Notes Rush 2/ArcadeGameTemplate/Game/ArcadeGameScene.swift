@@ -39,6 +39,8 @@ class ArcadeGameScene: SKScene {
         
         
         self.anchorPoint = .zero
+        let mySprite = SKSpriteNode(color: .blue, size:
+           CGSize(width: 50, height: 50))
         
         self.camera = cam
         let player = Player()

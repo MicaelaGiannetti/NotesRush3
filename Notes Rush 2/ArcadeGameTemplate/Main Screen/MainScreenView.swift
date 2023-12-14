@@ -63,7 +63,7 @@ struct MainScreenView: View {
             Button {
                 withAnimation { self.startGame() }
             } label: {
-                Text("Insert a coin")
+                Text("Start a Game")
                     .padding()
                     .frame(maxWidth: .infinity)
             }

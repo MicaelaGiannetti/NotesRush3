@@ -6,7 +6,7 @@
 import SwiftUI
 
 @main
-struct ArcadeGameTemplateApp: App {
+ struct ArcadeGameTemplateApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
