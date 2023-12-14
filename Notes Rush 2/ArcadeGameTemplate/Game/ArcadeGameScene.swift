@@ -93,7 +93,7 @@ extension ArcadeGameScene {
     
     private func setUpGame() {
         self.gameLogic.setUpGame()
-        self.backgroundColor = SKColor.white
+    //    self.backgroundColor = SKColor.white
         
         // TODO: Customize!
     }
